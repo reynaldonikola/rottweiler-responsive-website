@@ -1,97 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Rottweiler World | Responsive Site</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/main.css" />
-  <script defer src="js/main.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rottweiler World</title>
+<meta name="description" content="A responsive one-page site about the Rottweiler breed, built with semantic HTML, CSS Grid, Flexbox and vanilla JavaScript.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-  <main class="page">
 
-    <header class="site-header" id="top">
-      <div class="brand">
-        <img class="brand__logo" src="img/logo.png" alt="Rottweiler World logo" />
-        <div class="brand__text">
-          <h1>Rottweiler World</h1>
-          <p>Loyal • Strong • Intelligent • Family Companion</p>
-        </div>
-      </div>
-    </header>
+<a class="skip" href="#home">Skip to content</a>
 
-    <aside class="sidebar">
-      <nav class="menu">
-        <a class="menu__link" href="#home">Home</a>
-        <a class="menu__link" href="#gallery">Gallery</a>
-        <a class="menu__link" href="#media">Media</a>
-        <a class="menu__link" href="#contact">Contact</a>
+<header class="site-header" id="top">
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true"></span>
+      Rottweiler World
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+      <span class="sr">Menu</span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#media">Media</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-        <details class="menu__details">
-          <summary>About this site</summary>
-          <p>This page demonstrates CSS Grid and Flexbox with semantic HTML.</p>
-        </details>
-      </nav>
-    </aside>
+<section class="hero">
+  <img src="images/hero.jpg" alt="Adult Rottweiler sitting on a hillside at golden hour" class="hero-img">
+  <div class="hero-copy">
+    <p class="eyebrow">Breed focus</p>
+    <h1>Strong. Loyal.<br>Intelligent.</h1>
+    <p class="lede">A responsive site about one of the most confident and devoted dog breeds, built with semantic HTML, CSS Grid, Flexbox and vanilla JavaScript.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#gallery">See the gallery</a>
+      <a class="btn ghost" href="#home">Read about the breed</a>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span></span></div>
+</section>
 
-    <section class="content">
+<section class="stats reveal">
+  <div class="wrap stat-grid">
+    <div><strong data-count="110">0</strong><span>lb, typical adult male</span></div>
+    <div><strong data-count="26">0</strong><span>in, shoulder height</span></div>
+    <div><strong data-count="9">0</strong><span>to 10 years, life span</span></div>
+    <div><strong data-count="2">0</strong><span>hours of daily activity</span></div>
+  </div>
+</section>
 
-      <section class="section" id="home">
-        <article class="section__inner">
-          <h2>Home</h2>
-          <p>
-            Rottweilers are strong, loyal and intelligent dogs. With proper training they are loving family companions.
-          </p>
-        </article>
-      </section>
+<main>
 
-      <section class="section" id="gallery">
-        <article class="section__inner">
-          <h2>Gallery</h2>
+<section id="home" class="section">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Home</p>
+      <h2>Why people admire Rottweilers</h2>
+      <p>Rottweilers are powerful, dependable dogs with a long working history. They are admired for their courage, intelligence and loyalty to their families. With proper training and daily activity they become calm and steady companions.</p>
+      <p>The breed does best with structure. Consistent rules, early socialization and real exercise turn that natural confidence into a dog that is easy to live with.</p>
+    </div>
+    <figure class="reveal frame">
+      <img src="images/family.jpg" alt="Rottweiler resting on a wooden floor beside a sunny window" loading="lazy">
+      <figcaption>A well trained Rottweiler is calm indoors and alert outside.</figcaption>
+    </figure>
+  </div>
 
-          <figure class="figure">
-            <img src="img/rottweiler1.jpg" alt="Rottweiler outdoors" />
-            <figcaption>A confident Rottweiler enjoying the outdoors.</figcaption>
-          </figure>
+  <div class="wrap cards">
+    <article class="card reveal">
+      <h3>Protective nature</h3>
+      <p>Naturally confident and watchful. They build strong bonds with their families and read a room before they react.</p>
+    </article>
+    <article class="card reveal">
+      <h3>Training and exercise</h3>
+      <p>They respond well to consistent training, positive reinforcement and daily mental work, not just physical exercise.</p>
+    </article>
+    <article class="card reveal">
+      <h3>Care and grooming</h3>
+      <p>The short coat is easy to maintain. Regular brushing, nail care and good nutrition cover most of it.</p>
+    </article>
+    <article class="card reveal">
+      <h3>Loyal companion</h3>
+      <p>Raised properly, they are affectionate and stable family dogs that stay close without being needy.</p>
+    </article>
+  </div>
+</section>
 
-          <img src="img/rottweiler2.jpg" alt="Rottweiler">
-          <img src="img/rottweiler3.jpg" alt="Rottweiler">
-          <img src="img/rottweiler4.jpg" alt="Rottweiler">
+<section id="gallery" class="section alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Gallery</p>
+      <h2>The classic black and tan</h2>
+      <p class="lede">Click any photo to open it larger.</p>
+    </div>
+    <div class="gallery">
+      <figure class="reveal">
+        <button class="shot" data-full="images/young.jpg" data-caption="A focused young Rottweiler with classic markings.">
+          <img src="images/young.jpg" alt="Young Rottweiler puppy with classic black and tan markings" loading="lazy">
+        </button>
+        <figcaption><strong>Young and alert</strong> Early socialization shapes the adult dog.</figcaption>
+      </figure>
+      <figure class="reveal">
+        <button class="shot" data-full="images/active.jpg" data-caption="Rottweilers need real daily exercise.">
+          <img src="images/active.jpg" alt="Adult Rottweiler running across a grass field" loading="lazy">
+        </button>
+        <figcaption><strong>Active outdoors</strong> Built for work, not for the couch.</figcaption>
+      </figure>
+      <figure class="reveal">
+        <button class="shot" data-full="images/family.jpg" data-caption="Calm indoors when their needs are met.">
+          <img src="images/family.jpg" alt="Rottweiler lying calmly indoors" loading="lazy">
+        </button>
+        <figcaption><strong>At home</strong> Steady and quiet once the day's work is done.</figcaption>
+      </figure>
+      <figure class="reveal wide">
+        <button class="shot" data-full="images/hero.jpg" data-caption="Confident presence, the breed's signature.">
+          <img src="images/hero.jpg" alt="Adult Rottweiler on a hillside at sunset" loading="lazy">
+        </button>
+        <figcaption><strong>Confident presence</strong> The look the breed is known for.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-        </article>
-      </section>
+<section id="media" class="section">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Media</p>
+      <h2>Watch the breed at work</h2>
+      <p>This clip shows the intelligence, strength and training ability that made Rottweilers a working breed long before they were family dogs.</p>
+      <p class="muted">The video is embedded responsively, so it keeps its aspect ratio from a phone to a wide monitor.</p>
+    </div>
+    <div class="reveal video-frame">
+      <iframe src="https://www.youtube.com/embed/biAeLylQtt4" title="Rottweiler breed video" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
 
-      <section class="section" id="media">
-        <article class="section__inner">
-          <h2>Media</h2>
+<section id="contact" class="section alt">
+  <div class="wrap contact">
+    <div class="reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Questions about the breed?</h2>
+      <p class="lede">This is a student project, so the contact details below are placeholders.</p>
+    </div>
+    <ul class="reveal contact-list">
+      <li><span>Email</span> rottweilerfan@example.com</li>
+      <li><span>Phone</span> (801) 555-1234</li>
+      <li><span>Location</span> Orem, Utah</li>
+    </ul>
+  </div>
+</section>
 
-          <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/jV4j1B2E2wE"
-          title="Rottweiler video"
-          frameborder="0"
-          allowfullscreen></iframe>
+</main>
 
-        </article>
-      </section>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p>Rottweiler World, a coursework project by Reynaldo Moros.</p>
+    <p><a href="https://github.com/reynaldonikola">github.com/reynaldonikola</a></p>
+  </div>
+</footer>
 
-      <section class="section" id="contact">
-        <article class="section__inner">
-          <h2>Contact</h2>
-          <p>Email: rottweilerfan@example.com</p>
-          <p>Phone: (801) 555-1234</p>
-          <p>Address: Orem, Utah</p>
-        </article>
-      </section>
+<div class="lightbox" hidden>
+  <button class="close" aria-label="Close">&times;</button>
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+</div>
 
-    </section>
-
-    <footer class="site-footer">
-      <p>© 2026 Rottweiler World</p>
-    </footer>
-
-  </main>
+<script src="js/main.js"></script>
 </body>
 </html>
